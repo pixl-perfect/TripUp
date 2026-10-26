@@ -5,3 +5,4 @@ dist
 .env.*.local
 *.p8
 .DS_Store
+.vite
