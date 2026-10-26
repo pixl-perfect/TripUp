@@ -1,0 +1,956 @@
+{
+  "_meta": {
+    "description": "Mock data for the TripUp prototype (Lisbon scenario). All amounts in cents, EUR. Times are local Lisbon time (Europe/Lisbon).",
+    "currency": "EUR",
+    "amountUnit": "cents",
+    "currentUserId": "ari",
+    "now": "2026-10-25T18:30:00+00:00",
+    "note": "Restaurants are real Lisbon places; prices, ratings and distances are mock values. Balances and transfers are pre-computed and consistent with the expenses."
+  },
+  "users": [
+    {
+      "id": "ari",
+      "name": "Ari",
+      "fullName": "Ari Costa",
+      "initials": "AC",
+      "color": "#FF7A59",
+      "role": "participant"
+    },
+    {
+      "id": "nic",
+      "name": "Nic",
+      "fullName": "Nic Lindqvist",
+      "initials": "NL",
+      "color": "#4C8BF5",
+      "role": "participant"
+    },
+    {
+      "id": "maya",
+      "name": "Maya",
+      "fullName": "Maya Okafor",
+      "initials": "MO",
+      "color": "#8E6CEF",
+      "role": "organizer"
+    },
+    {
+      "id": "jonas",
+      "name": "Jonas",
+      "fullName": "Jonas Weber",
+      "initials": "JW",
+      "color": "#2BB673",
+      "role": "participant"
+    },
+    {
+      "id": "lea",
+      "name": "Lea",
+      "fullName": "Lea Moreau",
+      "initials": "LM",
+      "color": "#F2B705",
+      "role": "participant"
+    },
+    {
+      "id": "ren",
+      "name": "Ren",
+      "fullName": "Ren Tanaka",
+      "initials": "RT",
+      "color": "#E5487B",
+      "role": "participant",
+      "note": "Not in the trip yet. Ari adds Ren in step 2. Suggested contact: 'Friend of Lea'."
+    }
+  ],
+  "contacts": [
+    {
+      "userId": "ren",
+      "mutualFriends": [
+        "lea",
+        "jonas"
+      ],
+      "source": "phone contacts"
+    },
+    {
+      "id": "c_sofia",
+      "name": "Sofia Ramos",
+      "initials": "SR",
+      "mutualFriends": [
+        "maya"
+      ],
+      "source": "phone contacts"
+    },
+    {
+      "id": "c_tom",
+      "name": "Tom Hale",
+      "initials": "TH",
+      "mutualFriends": [],
+      "source": "phone contacts"
+    }
+  ],
+  "trips": [
+    {
+      "id": "trip_lisbon",
+      "name": "Lisbon long weekend",
+      "destination": "Lisbon, Portugal",
+      "emoji": "🇵🇹",
+      "status": "ongoing",
+      "startDate": "2026-10-22",
+      "endDate": "2026-10-25",
+      "dayLabel": "Day 4 of 4 · Last night",
+      "coverImage": "lisbon-alfama.jpg",
+      "organizerId": "maya",
+      "memberIds": [
+        "ari",
+        "nic",
+        "maya",
+        "jonas",
+        "lea"
+      ],
+      "memberIdsAfterAddingRen": [
+        "ari",
+        "nic",
+        "maya",
+        "jonas",
+        "lea",
+        "ren"
+      ],
+      "stay": {
+        "name": "Casa in Graça",
+        "address": "Rua da Graça 52, Lisbon"
+      },
+      "badges": {
+        "openPolls": 0,
+        "unsettledAmountForCurrentUser": -16960
+      }
+    },
+    {
+      "id": "trip_ski",
+      "name": "Ski week",
+      "destination": "Val Thorens, France",
+      "emoji": "🏔️",
+      "status": "upcoming",
+      "startDate": "2027-02-13",
+      "endDate": "2027-02-20",
+      "countdownLabel": "In 111 days",
+      "organizerId": "jonas",
+      "memberIds": [
+        "ari",
+        "jonas",
+        "lea",
+        "nic",
+        "c_sofia"
+      ],
+      "badges": {
+        "openPolls": 2,
+        "unsettledAmountForCurrentUser": 0
+      },
+      "preview": "2 open polls: chalet, ski pass"
+    },
+    {
+      "id": "trip_roskilde",
+      "name": "Roskilde Festival",
+      "destination": "Roskilde, Denmark",
+      "emoji": "🎪",
+      "status": "past",
+      "startDate": "2026-06-27",
+      "endDate": "2026-07-04",
+      "organizerId": "nic",
+      "memberIds": [
+        "ari",
+        "nic",
+        "maya",
+        "jonas"
+      ],
+      "badges": {
+        "openPolls": 0,
+        "unsettledAmountForCurrentUser": 0
+      },
+      "summary": "Settled · €1,284 total spend"
+    },
+    {
+      "id": "trip_berlin",
+      "name": "Berlin weekend",
+      "destination": "Berlin, Germany",
+      "emoji": "🇩🇪",
+      "status": "past",
+      "startDate": "2026-03-13",
+      "endDate": "2026-03-15",
+      "organizerId": "lea",
+      "memberIds": [
+        "ari",
+        "lea",
+        "maya"
+      ],
+      "badges": {
+        "openPolls": 0,
+        "unsettledAmountForCurrentUser": 0
+      },
+      "summary": "Settled · €612 total spend"
+    }
+  ],
+  "itinerary": {
+    "tripId": "trip_lisbon",
+    "days": [
+      {
+        "date": "2026-10-22",
+        "label": "Thu 22 Oct",
+        "items": [
+          {
+            "id": "itin_d1_1",
+            "time": "14:00",
+            "title": "Check in at Casa in Graça",
+            "type": "stay"
+          },
+          {
+            "id": "itin_d1_2",
+            "time": "16:30",
+            "title": "Pastéis de Belém",
+            "type": "food",
+            "linkedExpenseId": "exp_02"
+          },
+          {
+            "id": "itin_d1_3",
+            "time": "20:00",
+            "title": "Dinner at the house",
+            "type": "food"
+          }
+        ]
+      },
+      {
+        "date": "2026-10-23",
+        "label": "Fri 23 Oct",
+        "items": [
+          {
+            "id": "itin_d2_1",
+            "time": "09:15",
+            "title": "Train to Sintra",
+            "type": "transport",
+            "linkedExpenseId": "exp_04"
+          },
+          {
+            "id": "itin_d2_2",
+            "time": "11:00",
+            "title": "Pena Palace",
+            "type": "activity"
+          },
+          {
+            "id": "itin_d2_3",
+            "time": "19:00",
+            "title": "Groceries + cook at home",
+            "type": "food",
+            "linkedExpenseId": "exp_03"
+          }
+        ]
+      },
+      {
+        "date": "2026-10-24",
+        "label": "Sat 24 Oct",
+        "items": [
+          {
+            "id": "itin_d3_1",
+            "time": "10:30",
+            "title": "Tuk-tuk tour of Alfama",
+            "type": "activity",
+            "linkedExpenseId": "exp_05"
+          },
+          {
+            "id": "itin_d3_2",
+            "time": "15:00",
+            "title": "Miradouro da Senhora do Monte",
+            "type": "activity"
+          },
+          {
+            "id": "itin_d3_3",
+            "time": "21:00",
+            "title": "Fado night in Alfama",
+            "type": "activity"
+          }
+        ]
+      },
+      {
+        "date": "2026-10-25",
+        "label": "Sun 25 Oct · Today",
+        "items": [
+          {
+            "id": "itin_01",
+            "time": "09:30",
+            "title": "Breakfast at the house",
+            "type": "food",
+            "status": "done"
+          },
+          {
+            "id": "itin_02",
+            "time": "10:30",
+            "title": "LX Factory",
+            "type": "activity",
+            "status": "done"
+          },
+          {
+            "id": "itin_03",
+            "time": "13:00",
+            "title": "Lunch at Time Out Market",
+            "type": "food",
+            "status": "done"
+          },
+          {
+            "id": "itin_04",
+            "time": "15:00",
+            "title": "Belém Tower",
+            "type": "activity",
+            "status": "done"
+          },
+          {
+            "id": "itin_05",
+            "time": "17:30",
+            "title": "Back to the house to get ready",
+            "type": "stay",
+            "status": "now"
+          },
+          {
+            "id": "itin_06",
+            "time": "20:30",
+            "title": "Dinner",
+            "type": "food",
+            "status": "undecided",
+            "placeholder": "Where should we eat? Start a poll",
+            "afterPollClose": {
+              "title": "Dinner at Taberna da Rua das Flores",
+              "placeId": "r_taberna",
+              "status": "decided",
+              "addedBy": "poll_dinner",
+              "attendeeIds": [
+                "ari",
+                "nic",
+                "maya",
+                "jonas",
+                "lea",
+                "ren"
+              ]
+            }
+          },
+          {
+            "id": "itin_07",
+            "time": "23:00",
+            "title": "Drinks in Bairro Alto",
+            "type": "activity",
+            "status": "planned"
+          }
+        ]
+      }
+    ]
+  },
+  "places": [
+    {
+      "id": "r_ramiro",
+      "name": "Cervejaria Ramiro",
+      "vibe": "Lively & loud",
+      "tags": [
+        "Seafood",
+        "Beer hall",
+        "Local classic"
+      ],
+      "description": "Busy seafood hall famous for garlic prawns and the steak sandwich for dessert.",
+      "address": "Av. Almirante Reis 1, Lisbon",
+      "neighborhood": "Intendente",
+      "distanceFromStay": "1.4 km · 15 min walk",
+      "priceLevel": "€€",
+      "avgPricePerPerson": 3500,
+      "rating": 4.6,
+      "openUntil": "00:00",
+      "reservation": "No reservations, expect a queue",
+      "image": "ramiro.jpg"
+    },
+    {
+      "id": "r_taberna",
+      "name": "Taberna da Rua das Flores",
+      "vibe": "Cosy & intimate",
+      "tags": [
+        "Portuguese",
+        "Small plates",
+        "Wine"
+      ],
+      "description": "Tiny tavern with a chalkboard menu of modern petiscos to share.",
+      "address": "Rua das Flores 103, Lisbon",
+      "neighborhood": "Chiado",
+      "distanceFromStay": "2.1 km · 12 min by tram",
+      "priceLevel": "€€",
+      "avgPricePerPerson": 4000,
+      "rating": 4.5,
+      "openUntil": "23:30",
+      "reservation": "Walk-in only",
+      "image": "taberna.jpg"
+    },
+    {
+      "id": "r_saobento",
+      "name": "Café de São Bento",
+      "vibe": "Classic & late-night",
+      "tags": [
+        "Steak",
+        "Old-school",
+        "Late kitchen"
+      ],
+      "description": "Red-velvet steakhouse known for its steak in cream sauce, open late.",
+      "address": "Rua de São Bento 212, Lisbon",
+      "neighborhood": "São Bento",
+      "distanceFromStay": "3.0 km · 14 min by Uber",
+      "priceLevel": "€€€",
+      "avgPricePerPerson": 5500,
+      "rating": 4.4,
+      "openUntil": "02:00",
+      "reservation": "Bookable",
+      "image": "saobento.jpg"
+    }
+  ],
+  "poll": {
+    "id": "poll_dinner",
+    "tripId": "trip_lisbon",
+    "createdBy": "ari",
+    "question": "Where should we eat tonight?",
+    "createdAt": "2026-10-25T18:40:00+00:00",
+    "linkedItineraryItem": "itin_06",
+    "optionIds": [
+      "r_ramiro",
+      "r_taberna",
+      "r_saobento"
+    ],
+    "settings": {
+      "closesWhen": "everyone has voted, or at the deadline",
+      "deadline": "2026-10-25T19:45:00+00:00",
+      "deadlineLabel": "Closes at 19:45",
+      "oneVotePerPerson": true,
+      "canChangeVote": true,
+      "anonymous": false,
+      "tieBreaker": "creator decides"
+    },
+    "eligibleVoterIds": [
+      "ari",
+      "nic",
+      "maya",
+      "jonas",
+      "lea",
+      "ren"
+    ],
+    "voteTimeline": [
+      {
+        "t": "18:40",
+        "userId": "ari",
+        "optionId": "r_taberna",
+        "leader": "r_taberna",
+        "counts": {
+          "r_ramiro": 0,
+          "r_taberna": 1,
+          "r_saobento": 0
+        }
+      },
+      {
+        "t": "18:43",
+        "userId": "maya",
+        "optionId": "r_ramiro",
+        "leader": "tie",
+        "counts": {
+          "r_ramiro": 1,
+          "r_taberna": 1,
+          "r_saobento": 0
+        }
+      },
+      {
+        "t": "18:47",
+        "userId": "jonas",
+        "optionId": "r_ramiro",
+        "leader": "r_ramiro",
+        "counts": {
+          "r_ramiro": 2,
+          "r_taberna": 1,
+          "r_saobento": 0
+        }
+      },
+      {
+        "t": "18:52",
+        "userId": "lea",
+        "optionId": "r_taberna",
+        "leader": "tie",
+        "counts": {
+          "r_ramiro": 2,
+          "r_taberna": 2,
+          "r_saobento": 0
+        }
+      },
+      {
+        "t": "18:58",
+        "userId": "ren",
+        "optionId": "r_taberna",
+        "leader": "r_taberna",
+        "counts": {
+          "r_ramiro": 2,
+          "r_taberna": 3,
+          "r_saobento": 0
+        }
+      },
+      {
+        "t": "19:04",
+        "userId": "nic",
+        "optionId": "r_saobento",
+        "leader": "r_taberna",
+        "counts": {
+          "r_ramiro": 2,
+          "r_taberna": 3,
+          "r_saobento": 1
+        }
+      }
+    ],
+    "result": {
+      "closedAt": "2026-10-25T19:04:00+00:00",
+      "closedReason": "Everyone voted",
+      "winnerId": "r_taberna",
+      "finalCounts": {
+        "r_ramiro": 2,
+        "r_taberna": 3,
+        "r_saobento": 1
+      },
+      "addedToItinerary": "itin_06"
+    },
+    "prototypeHint": "Play the timeline at ~1.5 s per vote to simulate real-time results."
+  },
+  "expenses": [
+    {
+      "id": "exp_01",
+      "title": "Casa in Graça (3 nights)",
+      "category": "stay",
+      "paidBy": "maya",
+      "date": "2026-10-22",
+      "items": [
+        {
+          "name": "Stay",
+          "amount": 90000,
+          "splitAmong": [
+            "ari",
+            "nic",
+            "maya",
+            "jonas",
+            "lea"
+          ]
+        }
+      ],
+      "total": 90000,
+      "shares": {
+        "ari": 18000,
+        "nic": 18000,
+        "maya": 18000,
+        "jonas": 18000,
+        "lea": 18000
+      }
+    },
+    {
+      "id": "exp_02",
+      "title": "Pastéis de Belém",
+      "category": "food",
+      "paidBy": "nic",
+      "date": "2026-10-22",
+      "items": [
+        {
+          "name": "Pastries & coffee",
+          "amount": 1850,
+          "splitAmong": [
+            "ari",
+            "nic",
+            "maya",
+            "jonas",
+            "lea"
+          ]
+        }
+      ],
+      "total": 1850,
+      "shares": {
+        "ari": 370,
+        "nic": 370,
+        "maya": 370,
+        "jonas": 370,
+        "lea": 370
+      }
+    },
+    {
+      "id": "exp_03",
+      "title": "Pingo Doce groceries",
+      "category": "groceries",
+      "paidBy": "jonas",
+      "date": "2026-10-23",
+      "items": [
+        {
+          "name": "Groceries",
+          "amount": 6450,
+          "splitAmong": [
+            "ari",
+            "nic",
+            "maya",
+            "jonas",
+            "lea"
+          ]
+        }
+      ],
+      "total": 6450,
+      "shares": {
+        "ari": 1290,
+        "nic": 1290,
+        "maya": 1290,
+        "jonas": 1290,
+        "lea": 1290
+      }
+    },
+    {
+      "id": "exp_04",
+      "title": "Sintra train tickets",
+      "category": "transport",
+      "paidBy": "ari",
+      "date": "2026-10-23",
+      "items": [
+        {
+          "name": "Return tickets x5",
+          "amount": 5250,
+          "splitAmong": [
+            "ari",
+            "nic",
+            "maya",
+            "jonas",
+            "lea"
+          ]
+        }
+      ],
+      "total": 5250,
+      "shares": {
+        "ari": 1050,
+        "nic": 1050,
+        "maya": 1050,
+        "jonas": 1050,
+        "lea": 1050
+      }
+    },
+    {
+      "id": "exp_05",
+      "title": "Tuk-tuk tour Alfama",
+      "category": "activity",
+      "paidBy": "lea",
+      "date": "2026-10-24",
+      "items": [
+        {
+          "name": "Tour",
+          "amount": 7500,
+          "splitAmong": [
+            "ari",
+            "nic",
+            "maya",
+            "jonas",
+            "lea"
+          ]
+        }
+      ],
+      "total": 7500,
+      "shares": {
+        "ari": 1500,
+        "nic": 1500,
+        "maya": 1500,
+        "jonas": 1500,
+        "lea": 1500
+      }
+    }
+  ],
+  "newExpense": {
+    "id": "exp_06",
+    "title": "Dinner at Taberna da Rua das Flores",
+    "category": "food",
+    "paidBy": "ari",
+    "date": "2026-10-25",
+    "linkedItineraryItem": "itin_06",
+    "items": [
+      {
+        "name": "Food (shared plates)",
+        "amount": 18600,
+        "splitAmong": [
+          "ari",
+          "nic",
+          "maya",
+          "jonas",
+          "lea",
+          "ren"
+        ]
+      },
+      {
+        "name": "Wine (2 bottles)",
+        "amount": 5800,
+        "splitAmong": [
+          "ari",
+          "maya",
+          "jonas",
+          "lea"
+        ]
+      },
+      {
+        "name": "Water & soft drinks",
+        "amount": 1400,
+        "splitAmong": [
+          "ari",
+          "nic",
+          "maya",
+          "jonas",
+          "lea",
+          "ren"
+        ]
+      }
+    ],
+    "total": 25800,
+    "shares": {
+      "ari": 4783,
+      "nic": 3333,
+      "maya": 4783,
+      "jonas": 4783,
+      "lea": 4783,
+      "ren": 3333
+    }
+  },
+  "newExpenseFlow": {
+    "note": "Ari logs this after dinner. Default split = everyone at the dinner (6). She splits by item and unticks Ren and Nic on the wine.",
+    "receiptImage": "receipt-taberna.jpg",
+    "default": {
+      "splitType": "equal",
+      "splitAmong": [
+        "ari",
+        "nic",
+        "maya",
+        "jonas",
+        "lea",
+        "ren"
+      ],
+      "perPerson": 4300
+    },
+    "exclusionsApplied": [
+      {
+        "item": "Wine (2 bottles)",
+        "excluded": [
+          "ren",
+          "nic"
+        ]
+      }
+    ]
+  },
+  "balances": {
+    "explanation": "Positive = is owed money, negative = owes money. Sums to 0.",
+    "beforeDinner": {
+      "ari": -16960,
+      "nic": -20360,
+      "maya": 67790,
+      "jonas": -15760,
+      "lea": -14710,
+      "ren": 0
+    },
+    "afterDinner": {
+      "ari": 4057,
+      "nic": -23693,
+      "maya": 63005,
+      "jonas": -20543,
+      "lea": -19493,
+      "ren": -3333
+    },
+    "currentUserSummary": {
+      "before": {
+        "label": "You owe €169.60",
+        "amount": -16960
+      },
+      "after": {
+        "label": "You're owed €40.57",
+        "amount": 4057
+      }
+    }
+  },
+  "settlement": {
+    "pairwiseTransfersWithoutSimplifying": 11,
+    "simplifiedTransfers": [
+      {
+        "from": "nic",
+        "to": "maya",
+        "amount": 23693,
+        "id": "tr_1",
+        "status": "pending"
+      },
+      {
+        "from": "jonas",
+        "to": "maya",
+        "amount": 20543,
+        "id": "tr_2",
+        "status": "pending"
+      },
+      {
+        "from": "lea",
+        "to": "maya",
+        "amount": 18769,
+        "id": "tr_3",
+        "status": "pending"
+      },
+      {
+        "from": "lea",
+        "to": "ari",
+        "amount": 724,
+        "id": "tr_4",
+        "status": "pending"
+      },
+      {
+        "from": "ren",
+        "to": "ari",
+        "amount": 3333,
+        "id": "tr_5",
+        "status": "pending"
+      }
+    ],
+    "label": "5 payments instead of 11",
+    "paymentMethods": [
+      {
+        "id": "pm_bank",
+        "name": "Bank transfer",
+        "eta": "Instant"
+      },
+      {
+        "id": "pm_card",
+        "name": "Debit card",
+        "eta": "Instant"
+      },
+      {
+        "id": "pm_applepay",
+        "name": "Apple Pay",
+        "eta": "Instant"
+      }
+    ],
+    "paymentTimeline": [
+      {
+        "t": "23:42",
+        "transferId": "tr_5",
+        "status": "paid",
+        "method": "pm_applepay"
+      },
+      {
+        "t": "23:44",
+        "transferId": "tr_1",
+        "status": "paid",
+        "method": "pm_bank"
+      },
+      {
+        "t": "23:45",
+        "transferId": "tr_4",
+        "status": "paid",
+        "method": "pm_bank"
+      },
+      {
+        "t": "23:47",
+        "transferId": "tr_2",
+        "status": "paid",
+        "method": "pm_card"
+      },
+      {
+        "t": "23:51",
+        "transferId": "tr_3",
+        "status": "paid",
+        "method": "pm_bank"
+      }
+    ],
+    "confirmation": {
+      "title": "All squared up!",
+      "body": "Everyone's paid. Lisbon is officially settled.",
+      "stats": {
+        "totalTripSpend": 136850,
+        "payments": 5,
+        "settledAt": "2026-10-25T23:51:00+00:00"
+      },
+      "cta": "Plan the next trip"
+    }
+  },
+  "notifications": [
+    {
+      "id": "n1",
+      "t": "18:35",
+      "to": [
+        "ren"
+      ],
+      "type": "added_to_trip",
+      "text": "Ari added you to Lisbon long weekend"
+    },
+    {
+      "id": "n2",
+      "t": "18:40",
+      "to": [
+        "nic",
+        "maya",
+        "jonas",
+        "lea",
+        "ren"
+      ],
+      "type": "poll_created",
+      "text": "Ari started a poll: Where should we eat tonight?",
+      "cta": "Vote"
+    },
+    {
+      "id": "n3",
+      "t": "19:04",
+      "to": [
+        "ari",
+        "nic",
+        "maya",
+        "jonas",
+        "lea",
+        "ren"
+      ],
+      "type": "poll_closed",
+      "text": "Dinner's decided: Taberna da Rua das Flores at 20:30",
+      "cta": "See itinerary"
+    },
+    {
+      "id": "n4",
+      "t": "23:40",
+      "to": [
+        "nic",
+        "maya",
+        "jonas",
+        "lea",
+        "ren"
+      ],
+      "type": "expense_added",
+      "text": "Ari added Dinner at Taberna da Rua das Flores · €258.00"
+    },
+    {
+      "id": "n5",
+      "t": "23:41",
+      "to": [
+        "ari",
+        "nic",
+        "maya",
+        "jonas",
+        "lea",
+        "ren"
+      ],
+      "type": "settle_up_ready",
+      "text": "Trip balances are ready. Settle up in 5 payments",
+      "cta": "Settle up"
+    },
+    {
+      "id": "n6",
+      "t": "23:51",
+      "to": [
+        "ari",
+        "nic",
+        "maya",
+        "jonas",
+        "lea",
+        "ren"
+      ],
+      "type": "all_settled",
+      "text": "All squared up! Everyone's paid for Lisbon 🎉"
+    }
+  ],
+  "activityFeed": [
+    {
+      "t": "Yesterday 21:40",
+      "text": "Lea added Tuk-tuk tour Alfama · €75.00"
+    },
+    {
+      "t": "Today 13:20",
+      "text": "Jonas added a photo from Time Out Market"
+    },
+    {
+      "t": "Today 18:35",
+      "text": "Ari added Ren to the trip"
+    }
+  ]
+}

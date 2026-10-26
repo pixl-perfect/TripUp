@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Mona+Sans:wght@600;700&display=swap");
+
+/* TripUp components. Every value comes from tokens.json; literals only where the Figma file has no variable. */
+.tu-icon { display: block; flex: none; }
+.tu-ui { font-family: var(--font-ui); }
+
+/* Button */
+.tu-btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--space-8); border: 0; margin: 0; cursor: pointer;
+  font-family: var(--font-ui); white-space: nowrap; -webkit-tap-highlight-color: transparent; }
+.tu-btn--L { height: 52px; width: 100%; padding: 0 var(--space-20); border-radius: var(--radius-md); font-size: 17px; line-height: 22px; font-weight: 600; letter-spacing: -0.2px; }
+.tu-btn--M { height: 40px; padding: 0 var(--space-16); border-radius: var(--radius-full); font-size: 13px; line-height: 18px; font-weight: 600; }
+.tu-btn--primary { background: var(--accent-primary); color: var(--text-on-accent); }
+.tu-btn--primary:active { background: var(--accent-pressed); }
+.tu-btn--secondary { background: var(--bg-muted); color: var(--text-primary); box-shadow: inset 0 0 0 1px var(--border-subtle); }
+.tu-btn--ghost { background: transparent; color: var(--accent-text); }
+.tu-btn:focus-visible, .tu-iconbtn:focus-visible, .tu-segment:focus-visible, .tu-action:focus-visible { outline: 2px solid var(--accent-primary); outline-offset: 2px; }
+.tu-btn:disabled { opacity: .4; cursor: default; }
+
+/* Chip */
+.tu-chip { display: inline-flex; align-items: center; gap: 6px; height: 32px; padding: 0 var(--space-12); border-radius: var(--radius-full);
+  font-family: var(--font-ui); font-size: 13px; line-height: 18px; font-weight: 600; white-space: nowrap; box-sizing: border-box; }
+.tu-chip--default { background: var(--bg-muted); color: var(--text-secondary); }
+.tu-chip--selected { background: var(--bg-inverse); color: var(--text-inverse); }
+.tu-chip--accent { background: var(--accent-soft); color: var(--accent-text); }
+.tu-chip--poll { background: var(--poll-soft); color: var(--poll-primary); }
+.tu-chip--success { background: var(--status-success-soft); color: var(--status-success-text); }
+.tu-chip--warning { background: var(--status-warning-soft); color: var(--status-warning); }
+
+/* Icon button */
+.tu-iconbtn { width: 40px; height: 40px; border: 0; padding: 0; border-radius: var(--radius-full); display: inline-flex; align-items: center; justify-content: center;
+  color: var(--icon-primary); background: transparent; cursor: pointer; flex: none; }
+.tu-iconbtn--glass { background: var(--bg-glass); box-shadow: inset 0 0 0 1px var(--border-subtle); -webkit-backdrop-filter: blur(var(--glass-blur)); backdrop-filter: blur(var(--glass-blur)); }
+.tu-iconbtn--solid { background: var(--bg-elevated); box-shadow: inset 0 0 0 1px var(--border-subtle); }
+.tu-iconbtn--accent { background: var(--accent-primary); color: var(--text-on-accent); }
+
+/* Avatar */
+.tu-avatar { display: inline-flex; align-items: center; justify-content: center; border-radius: var(--radius-full); color: var(--text-on-accent);
+  box-shadow: 0 0 0 2px var(--bg-surface); font-family: var(--font-ui); flex: none; text-transform: uppercase; }
+.tu-avatar--S { width: 24px; height: 24px; font-size: 11px; line-height: 14px; font-weight: 600; letter-spacing: .6px; }
+.tu-avatar--M { width: 32px; height: 32px; font-size: 13px; line-height: 18px; font-weight: 600; }
+.tu-avatar--L { width: 40px; height: 40px; font-size: 15px; line-height: 20px; font-weight: 600; letter-spacing: -0.1px; }
+.tu-avatar--XL { width: 56px; height: 56px; font-size: 17px; line-height: 22px; font-weight: 600; letter-spacing: -0.2px; }
+.tu-avatars { display: inline-flex; align-items: center; }
+
+/* Status bar, home indicator, grabber (393pt iPhone 15 frame) */
+.tu-statusbar { position: relative; width: 393px; height: 54px; color: var(--text-primary); fill: currentColor; font-family: var(--font-ui); }
+.tu-statusbar--image { color: #ffffff; }
+.tu-statusbar__time { position: absolute; left: 51px; top: 17px; font-size: 17px; line-height: 22px; font-weight: 600; letter-spacing: -0.2px; }
+.tu-statusbar__icons { position: absolute; left: 294px; top: 17px; fill: currentColor; }
+.tu-homeindicator { width: 393px; height: 34px; display: flex; align-items: center; justify-content: center; }
+.tu-homeindicator span { width: 134px; height: 5px; border-radius: 3px; background: var(--text-primary); }
+.tu-grabber { width: 393px; height: 20px; display: flex; align-items: center; justify-content: center; }
+.tu-grabber span { width: 36px; height: 5px; border-radius: 3px; background: var(--border-strong); }
+
+/* Segment item */
+.tu-segment { flex: 1; height: 36px; border: 0; border-radius: var(--radius-sm); background: transparent; color: var(--text-secondary); cursor: pointer;
+  font-family: var(--font-ui); font-size: 13px; line-height: 18px; font-weight: 600; display: inline-flex; align-items: center; justify-content: center; gap: 6px; }
+.tu-segment--on { background: var(--bg-elevated); color: var(--text-primary); }
+
+/* Text field */
+.tu-field { display: flex; align-items: center; gap: 10px; height: 48px; padding: 0 var(--space-16); border-radius: var(--radius-md); background: var(--bg-muted);
+  color: var(--icon-secondary); box-sizing: border-box; cursor: text; }
+.tu-field--focused, .tu-field:focus-within { box-shadow: inset 0 0 0 1.5px var(--accent-primary); }
+.tu-field input { flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; padding: 0; color: var(--text-primary);
+  font-family: var(--font-ui); font-size: 15px; line-height: 20px; letter-spacing: -0.1px; }
+.tu-field input::placeholder { color: var(--text-tertiary); }
+
+/* Shared row text */
+.tu-row__text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: var(--space-2); font-family: var(--font-ui); }
+.tu-row__title, .tu-itin__title, .tu-poll__name { font-size: 15px; line-height: 20px; font-weight: 600; letter-spacing: -0.1px; color: var(--text-primary); }
+.tu-row__sub, .tu-itin__sub { font-size: 13px; line-height: 18px; color: var(--text-secondary); }
+
+/* Trip card */
+.tu-tripcard { display: flex; align-items: center; gap: var(--space-12); padding: var(--space-12); border-radius: var(--radius-lg); background: var(--bg-elevated);
+  box-shadow: inset 0 0 0 1px var(--border-subtle); font-family: var(--font-ui); box-sizing: border-box; }
+.tu-photo { width: 64px; height: 64px; flex: none; border-radius: var(--radius-md); background: linear-gradient(135deg, var(--coral-300), var(--violet-500)); background-size: cover; background-position: center; }
+.tu-tripcard__text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: var(--space-4); }
+.tu-tripcard__title { font-size: 17px; line-height: 22px; font-weight: 600; letter-spacing: -0.2px; color: var(--text-primary); }
+.tu-tripcard__sub { font-size: 13px; line-height: 18px; color: var(--text-secondary); }
+.tu-tripcard__meta { display: flex; align-items: center; gap: var(--space-8); padding-top: var(--space-4); }
+.tu-chevron { color: var(--icon-secondary); }
+
+/* Itinerary item */
+.tu-itin { display: flex; align-items: center; gap: var(--space-12); font-family: var(--font-ui); }
+.tu-itin__time { width: 40px; flex: none; font-size: 13px; line-height: 18px; font-weight: 600; color: var(--text-secondary); }
+.tu-itin__card { flex: 1; min-width: 0; display: flex; align-items: center; gap: var(--space-12); padding: var(--space-12) 14px; border-radius: var(--radius-md);
+  background: var(--bg-elevated); box-shadow: inset 0 0 0 1px var(--border-subtle); }
+.tu-itin__text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: var(--space-2); }
+.tu-tile { width: 36px; height: 36px; flex: none; border-radius: var(--radius-sm); background: var(--bg-muted); color: var(--icon-secondary); display: inline-flex; align-items: center; justify-content: center; }
+.tu-itin--done { opacity: .83; }
+.tu-itin--now .tu-itin__time, .tu-itin--now .tu-itin__sub { color: var(--accent-text); }
+.tu-itin--now .tu-itin__card { box-shadow: inset 0 0 0 1.5px var(--accent-primary); }
+.tu-itin--now .tu-tile { background: var(--accent-soft); color: var(--accent-text); }
+.tu-itin--undecided .tu-itin__card { background: transparent; box-shadow: inset 0 0 0 1px var(--border-strong); }
+.tu-itin--undecided .tu-tile { background: var(--poll-soft); color: var(--poll-primary); }
+
+/* Poll option */
+.tu-poll { display: flex; flex-direction: column; gap: 10px; padding: 14px; border-radius: 16px; background: var(--bg-elevated);
+  box-shadow: inset 0 0 0 1px var(--border-subtle); font-family: var(--font-ui); box-sizing: border-box; }
+.tu-poll--leading { background: var(--poll-soft); box-shadow: inset 0 0 0 1.5px var(--poll-primary); }
+.tu-poll__top { display: flex; align-items: center; gap: var(--space-8); }
+.tu-poll__name { flex: 1; min-width: 0; }
+.tu-poll__count { font-family: var(--font-display); font-size: 17px; line-height: 22px; font-weight: 600; color: var(--text-primary); }
+.tu-poll--leading .tu-poll__count { color: var(--poll-primary); }
+.tu-poll__track { height: 6px; border-radius: var(--radius-full); background: var(--bg-muted); overflow: hidden; }
+.tu-poll__fill { height: 100%; border-radius: var(--radius-full); background: var(--poll-primary); transition: width .3s ease; }
+.tu-poll__voters { font-size: 12px; line-height: 16px; font-weight: 500; color: var(--text-secondary); }
+
+/* Person row */
+.tu-person { display: flex; align-items: center; gap: var(--space-12); padding: 10px var(--space-12); border-radius: 16px; box-sizing: border-box; }
+.tu-person--added { background: var(--status-success-soft); }
+.tu-added { display: inline-flex; align-items: center; gap: var(--space-4); height: 32px; padding: 0 var(--space-12) 0 10px; border-radius: var(--radius-full);
+  background: var(--status-success); color: var(--text-on-accent); font-family: var(--font-ui); font-size: 13px; line-height: 18px; font-weight: 600; }
+
+/* Transfer row */
+.tu-transfer { display: flex; align-items: center; gap: var(--space-12); padding: var(--space-12) 14px; border-radius: 16px; background: var(--bg-elevated);
+  box-shadow: inset 0 0 0 1px var(--border-subtle); box-sizing: border-box; }
+.tu-transfer__right { display: flex; flex-direction: column; align-items: flex-end; gap: var(--space-4); }
+.tu-transfer__amount { font-family: var(--font-display); font-size: 17px; line-height: 22px; font-weight: 600; color: var(--text-primary); }
+
+/* Action chip */
+.tu-action { display: inline-flex; align-items: center; gap: 6px; height: 38px; padding: 0 14px 0 var(--space-12); border: 0; border-radius: var(--radius-full);
+  background: var(--bg-muted); color: var(--text-primary); cursor: pointer; white-space: nowrap; font-family: var(--font-ui); font-size: 13px; line-height: 18px; font-weight: 600; }
+.tu-action--active { background: var(--accent-primary); color: var(--text-on-accent); }
+
+/* Notification banner */
+.tu-banner { display: flex; align-items: center; gap: var(--space-12); padding: var(--space-12); border-radius: var(--radius-lg); background: var(--bg-glass);
+  box-shadow: inset 0 0 0 1px var(--border-subtle); -webkit-backdrop-filter: blur(var(--glass-blur)); backdrop-filter: blur(var(--glass-blur)); font-family: var(--font-ui); box-sizing: border-box; }
+.tu-banner__app { width: 40px; height: 40px; flex: none; border-radius: var(--radius-sm); background: var(--accent-primary); color: var(--text-on-accent);
+  display: inline-flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 20px; line-height: 26px; font-weight: 600; letter-spacing: -0.2px; }
+.tu-banner__text { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: var(--space-2); }
+.tu-banner__top { display: flex; justify-content: space-between; align-items: flex-start; }
+.tu-banner__title { font-size: 13px; line-height: 18px; font-weight: 600; color: var(--text-primary); }
+.tu-banner__time { font-size: 12px; line-height: 16px; font-weight: 500; color: var(--text-tertiary); }
+.tu-banner__body { font-size: 13px; line-height: 18px; color: var(--text-secondary); }
+
+/* Toast */
+.tu-toast { display: inline-flex; align-items: center; gap: var(--space-8); height: 44px; padding: 0 var(--space-16) 0 var(--space-12); border-radius: var(--radius-full);
+  background: var(--bg-inverse); color: var(--text-inverse); font-family: var(--font-ui); font-size: 13px; line-height: 18px; font-weight: 600; white-space: nowrap; box-sizing: border-box; }
+.tu-toast__check { width: 24px; height: 24px; flex: none; border-radius: var(--radius-full); background: var(--status-success); color: var(--text-on-accent); display: inline-flex; align-items: center; justify-content: center; }
+
+/* Preview scaffolding */
+.tu-stage { padding: var(--space-16); background: var(--bg-canvas); font-family: var(--font-ui); color: var(--text-primary); display: flex; flex-wrap: wrap; gap: var(--space-12); align-items: center; }
+.tu-stage--col { flex-direction: column; align-items: stretch; max-width: 353px; }

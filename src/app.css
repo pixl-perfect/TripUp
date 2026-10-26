@@ -1,0 +1,63 @@
+/* Presentation layout: phone + demo panel. The prototype itself is styled by design/tokens.css and design/bundle.css. */
+*, *::before, *::after { box-sizing: border-box; }
+html, body, #root { margin: 0; height: 100%; }
+body { background: #07090f; color: #f7f6f2; font-family: var(--font-ui); -webkit-font-smoothing: antialiased; }
+h1, h2, h3, p { margin: 0; }
+button { font: inherit; color: inherit; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ---------- Stage: phone + demo panel ---------- */
+.stage { min-height: 100%; display: flex; align-items: center; justify-content: center; gap: 56px; padding: 32px;
+  background: radial-gradient(1000px 600px at 30% 20%, #1a2033 0%, #07090f 70%); }
+.phone { width: 393px; height: 852px; flex: none; border-radius: 56px; padding: 0; position: relative;
+  box-shadow: 0 0 0 11px #1b1d22, 0 0 0 13px #3a3d45, 0 40px 120px rgba(0,0,0,.6); }
+.phone__screen { position: absolute; inset: 0; border-radius: 56px; overflow: hidden; background: var(--bg-canvas);
+  color: var(--text-primary); font-family: var(--font-ui); isolation: isolate; }
+.phone__fit { position: absolute; left: 50%; top: 50%; width: 393px; height: 852px; transform-origin: 50% 50%; }
+.phone__screen::before { content: ''; position: absolute; z-index: 60; top: 11px; left: 50%; transform: translateX(-50%);
+  width: 124px; height: 36px; border-radius: 20px; background: #000; pointer-events: none; }
+
+.panel { width: 340px; align-self: stretch; padding-top: 72px; color: #e9e7e1; font-size: 14px; line-height: 20px; }
+.panel__brand { display: flex; gap: 12px; align-items: center; margin-bottom: 16px; }
+.applogo { width: 44px; height: 44px; border-radius: 12px; background: var(--coral-500); color: #ffffff;
+  font-family: var(--font-display); font-weight: 700; font-size: 22px; display: grid; place-items: center; }
+.panel__name { font-family: var(--font-display); font-weight: 700; font-size: 22px; line-height: 26px; }
+.panel__sub { color: #9097a6; font-size: 13px; }
+.modes { display: flex; padding: 3px; margin-bottom: 16px; border-radius: 999px; background: rgba(255,255,255,.08); }
+.modes button { flex: 1; height: 34px; border: 0; border-radius: 999px; background: transparent; color: #c9c6be; font-weight: 600; font-size: 13px; cursor: pointer; }
+.modes button:hover { color: #fff; }
+.modes button[aria-pressed="true"] { background: #f7f6f2; color: var(--neutral-900); }
+.modes button:focus-visible { outline: 2px solid var(--coral-500); outline-offset: 2px; }
+.panel__intro { color: #c9c6be; margin-bottom: 20px; }
+.steps { list-style: none; margin: 0 0 20px; padding: 0; display: flex; flex-direction: column; gap: 2px; }
+.steps button, .steps__item { width: 100%; display: flex; gap: 12px; text-align: left; padding: 10px 12px; border: 0; border-radius: 14px; background: transparent; cursor: pointer; align-items: flex-start; }
+.steps button:hover { background: rgba(255,255,255,.05); }
+.steps button:focus-visible { outline: 2px solid var(--coral-500); outline-offset: 2px; }
+.steps__n { width: 24px; height: 24px; border-radius: 50%; flex: none; display: grid; place-items: center; font-size: 12px; font-weight: 600;
+  background: rgba(255,255,255,.08); color: #9097a6; }
+.steps__text { display: flex; flex-direction: column; gap: 4px; }
+.steps__title { font-weight: 600; color: #c9c6be; }
+.steps__body { color: #c9c6be; font-size: 13px; line-height: 18px; }
+.steps .is-now button, .steps .is-now .steps__item { background: rgba(255,107,74,.12); }
+.steps__item { cursor: default; }
+.steps .is-now .steps__n { background: var(--coral-500); color: var(--neutral-900); }
+.steps .is-now .steps__title { color: #fff; }
+.steps .is-done .steps__n { background: rgba(46,196,182,.18); color: var(--teal-500); }
+.panel__actions { display: flex; gap: 8px; margin-bottom: 16px; }
+.pbtn { height: 40px; padding: 0 16px; border-radius: 999px; border: 0; background: rgba(255,255,255,.08); color: #f7f6f2; font-weight: 600; font-size: 13px; cursor: pointer; }
+.pbtn:hover { background: rgba(255,255,255,.14); }
+.panel__foot { color: #8993a7; font-size: 12px; line-height: 16px; }
+
+@media (max-width: 860px) {
+  .stage { flex-direction: column; gap: 32px; padding: 24px 16px; }
+  .panel { width: 100%; max-width: 393px; padding-top: 0; }
+}
+/* On a real phone: the app fills the screen, no frame, no panel. */
+@media (max-width: 500px) {
+  .stage { padding: 0; display: block; background: var(--neutral-900); }
+  .phone { width: 100vw; height: 100dvh; border-radius: 0; box-shadow: none; }
+  .phone__screen { border-radius: 0; }
+  .phone__screen::before { display: none; }
+  .panel { display: none; }
+}
+
